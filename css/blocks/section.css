@@ -1,0 +1,97 @@
+.section {
+    padding: 150px 0;
+}
+
+.section-header {
+    margin: 0 auto;
+    margin-bottom: 50px;
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+}
+
+.section-header-groups{
+    max-width: 550px;
+}
+
+.section-title {
+    font-family: var(--font-headings);
+    font-weight: 700;
+    font-size: clamp(3rem, 1.909rem + 5.45vw, 6rem);
+    /*96px - 48px*/
+    color: var(--accent);
+    letter-spacing: 0.08em;
+    /* line-height: 110px; */
+}
+
+.section-header p {
+    font-size: 16px;
+    line-height: 2;
+}
+
+.section-trainers-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 35px 30px;
+}
+
+.section-groups-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 105px 32px;
+}
+
+/* Другие размеры экрана */
+
+@media (max-width: 1200px) {
+    .section-groups-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 80px 32px;
+    }
+}
+@media (max-width: 1025px) {
+    .section {
+        padding: 100px 0;
+    }
+
+    .section-trainers-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (max-width: 800px) {
+    .section-groups-grid {
+        gap: 60px 32px;
+    }
+}
+@media (max-width: 700px) {
+    .section-groups-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 60px 32px;
+    }
+}
+@media (max-width: 600px) {
+    .section-groups-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 60px 20px;
+    }
+
+    .section {
+        padding: 40px 10px;
+    }
+
+    .section-trainers-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .section-header p {
+        font-size: 14;
+        margin-bottom: 30px;
+    }
+}
+@media (max-width: 400px){
+    .section-groups-grid {
+        grid-template-columns: 1fr;
+        gap: 50px 20px;
+        justify-items: center;
+    }
+}
